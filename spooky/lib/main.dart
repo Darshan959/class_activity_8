@@ -37,18 +37,18 @@ class _GameScreenState extends State<GameScreen>
   }
 
   Future<void> playBackgroundMusic() async {
-    await _audioPlayer.setAsset('audio/scary.mp3'); // Corrected the path
+    await _audioPlayer.setAsset('audio/scary.mp3');
     await _audioPlayer.setLoopMode(LoopMode.one);
     await _audioPlayer.play();
   }
 
   Future<void> playJumpScare() async {
-    await _audioPlayer.setAsset('audio/scary1.mp3'); // Corrected the path
+    await _audioPlayer.setAsset('audio/scary1.mp3');
     await _audioPlayer.play();
   }
 
   Future<void> playSuccessSound() async {
-    await _audioPlayer.setAsset('audio/scary2.mp3'); // Corrected the path
+    await _audioPlayer.setAsset('audio/scary2.mp3');
     await _audioPlayer.play();
   }
 
@@ -133,11 +133,11 @@ class _AnimatedSpookyCharacterState extends State<AnimatedSpookyCharacter>
       opacity: _controller.drive(CurveTween(curve: Curves.easeInOut)),
       child: Image.asset(
         widget.item == 'spook4'
-            ? 'img/spook1.avif' // Correct item image
+            ? 'img/spook1.avif'
             : widget.item == 'spook3'
                 ? 'img/spook2.jpeg' // Trap image
                 : 'img/spook3.jpeg', // Other item image
-        width: 100, // Increase size to fit phone screen
+        width: 100,
         height: 100,
       ),
     );
